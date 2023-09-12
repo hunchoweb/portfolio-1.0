@@ -5,7 +5,7 @@ import Image from 'next/image';
 type Props = {}
 
 function Projects({}: Props) {
-    // const projects =[ 1 ,2 ,3 ,4 ,5 ];
+    const projects =[ 1 ,2 ,3 ,4 ,5 ];
   return (
     <motion.div
         initial={{ opacity: 0 }}
@@ -18,7 +18,7 @@ function Projects({}: Props) {
         </h3>
 
         <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
-            {/* {projects.map((project, i) => ( */}
+            {projects.map((project, i) => (
                 <div className='w-screen flex flex-col space-y-5 items-center justify-center flex-shrink-0 snap-center p-20 md:p-44 h-screen'>
                     <motion.img
                         initial={{
@@ -34,7 +34,7 @@ function Projects({}: Props) {
 
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
                         <h4 className='text-4xl font-semibold text-center'>
-                            <span className='decoration-[#F7AB0A]/50 underline'>Case Study 1 of 5:</span>
+                            <span className='decoration-[#F7AB0A]/50 underline'>Case Study {i + 1} of {projects.length}:</span>
                             Netflix Clone
                         </h4>
 
@@ -44,7 +44,7 @@ function Projects({}: Props) {
                         </p>
                     </div>
                 </div>
-            {/* ))} */}
+            ))}
         </div>
 
         <div className='w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12' />
