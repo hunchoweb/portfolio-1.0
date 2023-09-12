@@ -2,8 +2,6 @@ import React from 'react'
 import { motion } from "framer-motion";
 import Image from 'next/image';
 
-// https://www.webdesignerdepot.com/cdn-origin/uploads/2015/11/netflix_devices2.jpg
-
 type Props = {}
 
 function Projects({}: Props) {
@@ -20,7 +18,7 @@ function Projects({}: Props) {
         </h3>
 
         <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
-            {projects.map((project, i) => (
+            {projects.map((_project, i) => (
                 <div className='w-screen flex flex-col space-y-5 items-center justify-center flex-shrink-0 snap-center p-20 md:p-44 h-screen'>
                     <motion.img
                         initial={{
