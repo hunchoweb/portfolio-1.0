@@ -1,5 +1,6 @@
 'use client';
 import About from '@/components/About';
+import ContactMe from '@/components/ContactMe';
 import Header from '@/components/Header'
 import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
@@ -11,7 +12,6 @@ export default function Home() {
   return (
     <div className='snap-y snap-mandatory h-screen overflow-y-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 bg-[rgb(36,36,36)] text-white z-0'>
       <Header/>
-      {/* Hero */}
       <section id='hero' className='snap-start'>
         <Hero />
       </section>
@@ -28,12 +28,13 @@ export default function Home() {
         <Skills />
       </section>
 
-      {/* Projects  */}
       <section id='projects' className='snap-start'>
         <Projects />
       </section>
 
-      {/* Contact Me */}
+      <section id='contact' className='snap-start'>
+        <ContactMe />
+      </section>
 
     </div>
   )
