@@ -1,11 +1,16 @@
 import React from 'react'
 import { SocialIcon } from 'react-social-icons'
 import { motion } from 'framer-motion'
+import { Social } from '../../typings'
+import { client } from '../../sanity/lib/client'
+import { groq } from 'next-sanity'
+import social from '../../sanity/schemas/social'
 
+type Props = {
+    socials: Social[]
+};
 
-type Props = {}
-
-function Header({}: Props) {
+function Header({ socials }: Props) {
   return (
     <header className='sticky top-0 flex items-start xl:items-center justify-between p-5 z-20 max-w-7xl mx-auto'>
         <motion.div 
@@ -23,12 +28,15 @@ function Header({}: Props) {
          className='flex flex-row items-center'
         >
             {/* Social Icons */}
-            <SocialIcon 
-                url='https://twitter.com/hunchoweb' 
-                target='_blank' 
-                fgColor='gray' 
-                bgColor='transparent' 
-            />
+            {/* {socials.map((social) =>(
+                <SocialIcon 
+                    key={social._id}
+                    url={social.url} 
+                    target='_blank' 
+                    fgColor='gray' 
+                    bgColor='transparent' 
+                />
+            ))} */}
             <SocialIcon 
                 url='https://twitter.com/hunchoweb' 
                 target='_blank' 

@@ -1,10 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useClient } from 'sanity'
+import { PageInfo } from '../../typings'
 
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo;
+}
 
-function About({}: Props) {
+function About({ pageInfo }: Props) {
   return (
     <motion.div
         initial={{ opacity: 0 }}
